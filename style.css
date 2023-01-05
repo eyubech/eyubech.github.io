@@ -1,23 +1,34 @@
-body {
-	background-color: #7892B5;
-  text-align: center;
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
   }
-
-h1 {
-  text-align: center;
-}
-
-button {
-	background-color: #8CB9C0;
+  
+  /* Add some content at the bottom of the video/page */
+  .content {
+	position: fixed;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.5);
+	color: #f1f1f1;
+	width: 100%;
+	padding: 20px;
+  }
+  
+  /* Style the button used to pause/play the video */
+  #myBtn {
+	width: 200px;
+	font-size: 18px;
+	padding: 10px;
 	border: none;
-	color: white;
-	padding: 15px 32px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
+	background: #000;
+	color: #fff;
+	cursor: pointer;
   }
-
-a {
-	color: white;
-}
+  
+  #myBtn:hover {
+	background: #ddd;
+	color: black;
+  }
