@@ -6,30 +6,43 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #000; /* Change as needed */
+    background-color: #000;
     flex-direction: column;
-    font-family: Arial, sans-serif; /* Add a font family */
+    font-family: Arial, sans-serif; 
 }
 
 #particles-js {
     position: absolute;
     width: 100%;
     height: 100%;
-    z-index: -1; /* Ensure particles are behind the content */
+    z-index: -1; 
 }
 
 #threejs-container {
     position: relative;
     width: 100px;
     height: 100px;
-    margin-bottom: 20px; /* Adjust this value to control the spacing between the logo and the text */
+    margin-bottom: 20px; 
 }
 
 .coming-soon {
     text-align: center;
     color: #fff;
-    z-index: 1; /* Ensure text is above the 3D object */
+    z-index: 1;
     position: relative;
+}
+
+.images-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.images-row img {
+    width: 250px;
+    height: 250px; 
 }
 
 .coming-soon h1 {
@@ -74,4 +87,3 @@ body {
         opacity: 1;
     }
 }
-
