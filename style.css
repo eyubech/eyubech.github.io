@@ -38,7 +38,7 @@ body {
 
 .medium-icon i {
     font-size: 3em;
-    color: #ff6347; /* Change this color as needed */
+    color: #ff6347;
 }
 
 .images-row {
@@ -50,8 +50,8 @@ body {
 }
 
 .images-row img {
-    width: 250px;
-    height: 250px; 
+    width: 80px;
+    height: 80px; 
 }
 
 .coming-soon h1 {
