@@ -10,7 +10,7 @@
 <body>
     <div id="particles-js"></div>
     <div class="content">
-        <section class="hero-section">
+        <section id="home" class="hero-section">
             <div class="name-container">
                 <h1>Ayoub Ech-chetyouy</h1>
                 <svg class="verified-icon" viewBox="0 0 24 24">
@@ -38,161 +38,92 @@
                 </a>
             </div>
             <div class="scroll-indicator">
-                <p>Scroll to see my projects</p>
-                <svg class="scroll-arrow" viewBox="0 0 24 24">
-                    <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" transform="rotate(90 12 12)"/>
-                </svg>
+                <a href="#projects" class="scroll-link">
+                    <p>Scroll to see my projects</p>
+                    <svg class="scroll-arrow" viewBox="0 0 24 24">
+                        <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" transform="rotate(90 12 12)"/>
+                    </svg>
+                </a>
             </div>
         </section>
 
-        <section class="projects-section">
+        <section id="projects" class="projects-section">
             <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image-container">
-                        <img src="minishell.webp" alt="Project 1" class="project-image">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">AI Image Generator</h3>
-                        <p class="project-description">A deep learning model that generates unique images from text descriptions using state-of-the-art AI techniques.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">PyTorch</span>
-                            <span class="tech-tag">Flask</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image-container">
-                        <img src="doom.webp" alt="Project 2" class="project-image">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Data Analytics Dashboard</h3>
-                        <p class="project-description">Real-time analytics dashboard for monitoring business metrics with interactive visualizations.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Django</span>
-                            <span class="tech-tag">React</span>
-                        </div>
+            <div id="projects-grid" class="projects-grid">
+                <!-- Projects will be dynamically inserted here -->
+            </div>
+        </section>
+        
+        <section id="skills" class="skills-section">
+            <h2 class="section-title">My Skills</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3 class="category-title">Programming Languages</h3>
+                    <div class="skills-grid" id="programming-skills">
+                        <!-- Skills will be dynamically inserted here -->
                     </div>
                 </div>
-
-                <div class="project-card">
-                    <div class="project-image-container">
-                        <img src="doomAI.webp" alt="Project 3" class="project-image">
+                <div class="skill-category">
+                    <h3 class="category-title">Frameworks & Tools</h3>
+                    <div class="skills-grid" id="frameworks-skills">
+                        <!-- Skills will be dynamically inserted here -->
                     </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Automation Suite</h3>
-                        <p class="project-description">Collection of Python scripts for automating repetitive tasks and improving workflow efficiency.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Selenium</span>
-                            <span class="tech-tag">BeautifulSoup</span>
-                        </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="category-title">Soft Skills</h3>
+                    <div class="skills-grid" id="soft-skills">
+                        <!-- Skills will be dynamically inserted here -->
                     </div>
                 </div>
             </div>
-            <section class="projects-section">
-                <h2 class="section-title">Featured Projects</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-image-container">
-                            <img src="minishell.webp" alt="Project 1" class="project-image">
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">AI Image Generator</h3>
-                            <p class="project-description">A deep learning model that generates unique images from text descriptions using state-of-the-art AI techniques.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">PyTorch</span>
-                                <span class="tech-tag">Flask</span>
-                            </div>
-                        </div>
+        </section>
+        
+        <section id="contact" class="contact-section">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <svg viewBox="0 0 24 24" class="contact-icon">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                        <p>ayoub@example.com</p>
                     </div>
-            
-                    <div class="project-card">
-                        <div class="project-image-container">
-                            <img src="doom.webp" alt="Project 2" class="project-image">
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Data Analytics Dashboard</h3>
-                            <p class="project-description">Real-time analytics dashboard for monitoring business metrics with interactive visualizations.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">Django</span>
-                                <span class="tech-tag">React</span>
-                            </div>
-                        </div>
-                    </div>
-            
-                    <div class="project-card">
-                        <div class="project-image-container">
-                            <img src="doomAI.webp" alt="Project 3" class="project-image">
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Automation Suite</h3>
-                            <p class="project-description">Collection of Python scripts for automating repetitive tasks and improving workflow efficiency.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">Selenium</span>
-                                <span class="tech-tag">BeautifulSoup</span>
-                            </div>
-                        </div>
-                    </div>
-            
-                    <!-- New projects -->
-                    <div class="project-card">
-                        <div class="project-image-container">
-                            <img src="project4.webp" alt="Project 4" class="project-image">
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Chatbot Application</h3>
-                            <p class="project-description">An AI-powered chatbot that helps users with various queries, built using machine learning algorithms.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">TensorFlow</span>
-                                <span class="tech-tag">NLP</span>
-                            </div>
-                        </div>
-                    </div>
-            
-                    <div class="project-card">
-                        <div class="project-image-container">
-                            <img src="project5.webp" alt="Project 5" class="project-image">
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">E-commerce Platform</h3>
-                            <p class="project-description">Full-featured e-commerce platform with a clean interface, easy-to-use checkout, and advanced search options.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">Django</span>
-                                <span class="tech-tag">JavaScript</span>
-                            </div>
-                        </div>
-                    </div>
-            
-                    <div class="project-card">
-                        <div class="project-image-container">
-                            <img src="project6.webp" alt="Project 6" class="project-image">
-                        </div>
-                        <div class="project-content">
-                            <h3 class="project-title">Weather Forecasting App</h3>
-                            <p class="project-description">An application that provides accurate weather forecasts and alerts users about severe weather conditions.</p>
-                            <div class="project-tech">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">Flask</span>
-                                <span class="tech-tag">APIs</span>
-                            </div>
-                        </div>
+                    <div class="contact-item">
+                        <svg viewBox="0 0 24 24" class="contact-icon">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                        </svg>
+                        <p>New York, NY</p>
                     </div>
                 </div>
-            </section>
-            
-
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+            </div>
         </section>
+        
+        <footer class="footer">
+            <p>&copy; 2025 Ayoub Ech-chetyouy. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="https://github.com/eyubech" target="_blank">GitHub</a>
+                <a href="https://codeforces.com/profile/eyubech" target="_blank">Codeforces</a>
+                <a href="#home">Back to Top</a>
+            </div>
+        </footer>
     </div>
     <script src="particles-config.js"></script>
     <script src="main.js"></script>
+    <script src="projects.js"></script>
 </body>
 </html>

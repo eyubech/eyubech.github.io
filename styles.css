@@ -10,6 +10,7 @@ body {
     color: white;
     line-height: 1.6;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 #particles-js {
@@ -109,6 +110,15 @@ h2 {
     align-items: center;
     gap: 0.5rem;
     animation: bounce 2s infinite;
+    cursor: pointer;
+}
+
+.scroll-link {
+    color: inherit;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .scroll-indicator p {
@@ -136,11 +146,15 @@ h2 {
     }
 }
 
-.projects-section {
+.projects-section, .skills-section, .contact-section {
     padding: 4rem 2rem;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .section-title {
@@ -156,22 +170,25 @@ h2 {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     padding: 1rem;
+    width: 100%;
 }
 
 .project-card {
     background: rgba(255, 255, 255, 0.05);
     border-radius: 8px;
     overflow: hidden;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .project-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(100, 255, 218, 0.1);
 }
 
 .project-image-container {
     width: 100%;
-    height: 350px;
+    height: 250px;
     overflow: hidden;
 }
 
@@ -215,6 +232,25 @@ h2 {
     font-size: 0.875rem;
 }
 
+.project-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.project-link {
+    color: #64ffda;
+    text-decoration: none;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+}
+
 .typing { animation: typing 3.5s steps(30, end), blink-caret 0.75s step-end infinite; }
 .deleting { animation: deleting 2s steps(30, end), blink-caret 0.75s step-end infinite; }
 
@@ -233,10 +269,222 @@ h2 {
     50% { border-color: #64ffda }
 }
 
+/* Skills section styles */
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+}
+
+.skill-category {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.category-title {
+    color: #64ffda;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(100, 255, 218, 0.3);
+    padding-bottom: 0.5rem;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.skill-item {
+    background: rgba(100, 255, 218, 0.1);
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.skill-icon {
+    width: 20px;
+    height: 20px;
+    fill: #64ffda;
+}
+
+.skill-bar {
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    margin-top: 0.5rem;
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+    background: #64ffda;
+    border-radius: 3px;
+    transition: width 1s ease-in-out;
+}
+
+/* Contact section styles */
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    min-width: 250px;
+}
+
+.contact-icon {
+    width: 24px;
+    height: 24px;
+    fill: #64ffda;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    color: #64ffda;
+    font-size: 0.875rem;
+}
+
+.form-group input, .form-group textarea {
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: white;
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: #64ffda;
+}
+
+.submit-button {
+    background: transparent;
+    color: #64ffda;
+    border: 2px solid #64ffda;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+}
+
+.submit-button:hover {
+    background: #64ffda;
+    color: #0a192f;
+}
+
+/* Footer styles */
+.footer {
+    width: 100%;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-links a {
+    color: #64ffda;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.footer-links a:hover {
+    opacity: 0.8;
+}
+
+/* Animation for skill bars */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 @media (max-width: 768px) {
     h1 { font-size: 2.5rem; }
     h2 { font-size: 1.5rem; }
-    .projects-section { padding: 2rem 1rem; }
+    .projects-section, .skills-section, .contact-section { 
+        padding: 2rem 1rem; 
+        min-height: auto;
+    }
+    .contact-container {
+        flex-direction: column;
+    }
     .scroll-indicator { bottom: 1rem; }
     .scroll-indicator p { font-size: 0.875rem; }
+    .contact-form {
+        padding: 1.5rem;
+    }
+    .footer {
+        padding: 1.5rem 1rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .contact-container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .contact-info {
+        flex-direction: column;
+        flex: 1;
+    }
+    .contact-form {
+        flex: 2;
+    }
 }
